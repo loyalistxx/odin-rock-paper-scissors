@@ -1,3 +1,18 @@
-h1 {
+body {
     text-align: center;
+}
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+#score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    font-size: large;
+}
+#playerScoreNum, #computerScoreNum {
+    font-size: larger;
 }

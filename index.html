@@ -6,9 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Project - Rock Paper Scissors</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="javascript.js" async></script>
+    <script src="javascript.js" defer></script>
 </head>
 <body>
     <h1>Rock Paper Scissors</h1>
+    <div id="buttons">
+        <button id="rock" type="button">Rock</button>
+        <button id="paper" type="button">Paper</button>
+        <button id="scissors" type="button">Scissors</button>
+    </div>
+    <div id="results">
+        <div id="score">
+            <p id="playerScore">Player score: </p>
+            <p id="playerScoreNum"></p>
+            <p id="computerScore">Computer score: </p>
+            <p id="computerScoreNum"></p>
+        </div>
+        <h1 id="gameResult"></h1>  
+    </div>
 </body>
 </html>
