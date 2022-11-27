@@ -16,7 +16,8 @@ function getComputerChoice() {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
-// plays
+// plays a round of rock paper scissors and returns the result
+// alongside an increment to score
 const playRound = (playerSelection, computerSelection) => {
   switch (true) {
     case playerSelection === computerSelection:
@@ -39,6 +40,8 @@ const playRound = (playerSelection, computerSelection) => {
       return "Very odd"; // a default for when it breaks
   }
 };
+
+// game function that plays a round and gives the results
 const game = (choice) => {
   let result = playRound(choice, getComputerChoice());
   gameResult.innerHTML = result;
@@ -56,35 +59,8 @@ const game = (choice) => {
     computerScoreNum.innerHTML = computerScore;
   }
 };
-// eventListeners that playRound on click
+
+// eventListeners that play the game function on click with the corresponding choice
 rock.addEventListener("click", () => game("rock"));
 paper.addEventListener("click", () => game("paper"));
 scissors.addEventListener("click", () => game("scissors"));
-/*
-const body = document.body;
-
-
-
-const results = document.querySelector("#results");
-const win = document.createElement("h1");
-const lose = document.createElement("h1");
-
-rock.addEventListener("click", () => playRound("rock", getComputerChoice()));
-paper.addEventListener("click", () => playRound("paper", getComputerChoice()));
-scissors.addEventListener("click", () =>
-  playRound("scissors", getComputerChoice())
-);
-
-function game() {
-  if (playerScore == 5) {
-    win.textContent = "You Win the Game!";
-    body.removeChild(results);
-    results.appendChild(win);
-  } else if (computerScore == 5) {
-    lose.textContent = "You Lost the game!";
-    body.removeChild(results);
-    results.appendChild(lose);
-  }
-}
-buttons.addEventListener("click", () => game());
-*/

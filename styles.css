@@ -1,5 +1,15 @@
 body {
     text-align: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+}
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 #buttons {
     display: flex;
@@ -15,4 +25,15 @@ body {
 }
 #playerScoreNum, #computerScoreNum {
     font-size: larger;
+}
+#computerHands, #playerHands {
+    width: auto;
+    max-height: 100px;
+}
+#computerHands > img {
+            transform: rotate(180deg)
+            scale(50%);
+}
+#playerHands > img {
+    transform: scale(50%);
 }
