@@ -6,37 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Project - Rock Paper Scissors</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="javascript.js" defer></script>
 </head>
 <body>
-<div id="wrapper">
+<div data-container id="container">
     <section id="computerHands">
-        <img src="images/rock.png" alt="">
-        <img src="images/Paper.png" alt="">
-        <img src="images/scissors.png" alt="">
+        <img data-cpRock class="cpHand" src="images/rock.png" alt="">
+        <img data-cpPaper class="cpHand" src="images/Paper.png" alt="">
+        <img data-cpScissors class="cpHand" src="images/scissors.png" alt="">
     </section>
     <section id="game">
-    <h1>Rock Paper Scissors</h1>
-    <div id="buttons">
-        <button id="rock" type="button">Rock</button>
-        <button id="paper" type="button">Paper</button>
-        <button id="scissors" type="button">Scissors</button>
-    </div>
-    <div id="results">
-        <div id="score">
-            <p id="playerScore">Player score: </p>
-            <p id="playerScoreNum"></p>
-            <p id="computerScore">Computer score: </p>
-            <p id="computerScoreNum"></p>
+        <div id="computerScore">
+            <p>Computer Score</p>
+            <p data-cpScore id="cpScore"></p>
         </div>
-        <h1 id="gameResult"></h1>  
-    </div>
+        <div id="title">
+            <p>A Game of Rock, Paper and Scissors</p>
+            <p>First to get to 5 Wins is the Overall Winner</p>
+            <p>Made by <a href="https://github.com/loyalistxx">loyalist</a> / Adham for <a href="https://www.theodinproject.com/about">The Odin Project</a> / <a href="https://github.com/loyalistxx/odin-rock-paper-scissors">SOURCE</a></p>
+        </div>
+        <div id="playerScore">
+            <p>Player Score</p>
+            <p data-pcScore id="pcScore"></p>
+        </div>
     </section>
     <section id="playerHands">
-        <img src="images/rock.png" alt="">
-        <img src="images/Paper.png" alt="">
-        <img src="images/scissors.png" alt="">
+        <input id="pcRock" data-pcRock type="image" src="images/rock.png" alt="" tabindex="-1">
+        <input id="pcPaper" data-pcPaper type="image" src="images/Paper.png" alt="" tabindex="-1">
+        <input id="pcScissors" data-pcScissors type="image" src="images/scissors.png" alt="" tabindex="-1">
     </section>
+</div>
+<div data-gameResult class="hidden">
+    <p data-gameResultText></p>
+    <div id="gameResults">
+        <p>Player Score</p>
+        <p data-gameResult-pcScore id="pcScore"></p>
+        <p>Computer Score</p>
+        <p data-gameResult-cpScore id="cpScore"></p>
+    </div>
+    <button data-reset type="button">OK</button>
 </div>
 </body>
 </html>
